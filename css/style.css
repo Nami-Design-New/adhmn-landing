@@ -457,10 +457,10 @@ footer .social li a {
     font-size: 22px !important;
   }
 }
-.title h5,
+.title h6,
 .title p {
   color: #777;
-  line-height: 30px;
+  line-height: 28px;
   font-weight: normal;
 }
 
