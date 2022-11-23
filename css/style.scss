@@ -417,6 +417,245 @@ footer {
     }
   }
 }
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 250px;
+  flex: 1;
+  h1 {
+    font-weight: bold;
+    font-size: 32px !important;
+    @media (max-width: 768px) {
+      font-size: 22px !important;
+    }
+  }
+  h5,
+  p {
+    color: #777;
+    line-height: 30px;
+    font-weight: normal;
+  }
+}
+.aboutUs {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  .aboutImage {
+    text-align: center;
+    position: relative;
+    flex: 1;
+    z-index: 1;
+    height: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    @media (max-width: 768px) {
+      max-width: 250px;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      right: 50%;
+      background-color: $mainColor;
+      transform: translateX(50%) translateY(-50%);
+      z-index: -1;
+      animation: animateTwo 10s linear infinite alternate forwards;
+    }
+    img {
+      animation: animateOne 10s linear infinite alternate forwards;
+      height: 100%;
+      width: 100%;
+
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    @keyframes animateOne {
+      0%,
+      to {
+        border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+      }
+      14% {
+        border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+      }
+      28% {
+        border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+      }
+      42% {
+        border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+      }
+      56% {
+        border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+      }
+      70% {
+        border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+      }
+      84% {
+        border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+      }
+    }
+    @keyframes animateTwo {
+      0%,
+      to {
+        border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+      }
+      14% {
+        border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+      }
+      28% {
+        border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+      }
+      42% {
+        border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+      }
+      56% {
+        border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+      }
+      70% {
+        border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+      }
+      84% {
+        border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+      }
+    }
+  }
+}
+.services {
+  padding: 50px 20px 20px;
+  background-color: #ebf7f8;
+  border-radius: 24px;
+  .sectionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .swiper-wrapper {
+    padding: 30px 0px;
+    .swiper-slide {
+      height: auto;
+    }
+  }
+  .service {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $white-color;
+    padding: 24px 16px;
+    border-radius: 16px;
+    position: relative;
+    isolation: isolate;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0px;
+      width: 100%;
+      height: 0px;
+      background-color: $mainColor;
+      border-radius: 16px;
+      transform: translateX(-50%);
+      transition: $transition;
+      z-index: -1;
+      opacity: 0.1;
+      box-shadow: $BigShadow;
+    }
+    img {
+      height: 70px;
+      width: 100%;
+      object-fit: contain;
+    }
+    h4 {
+      font-weight: normal;
+      color: $black-color;
+      transition: $transition;
+    }
+    &:hover {
+      h4 {
+        color: $mainColor;
+      }
+      &::before {
+        height: 100%;
+      }
+    }
+  }
+}
+.swiperBtns {
+  position: relative;
+  display: flex;
+  .swiper-pagination {
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    left: unset;
+    color: $mainColor;
+    .swiper-pagination-current {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0px 8px;
+    }
+    .swiper-pagination-total {
+      font-size: 20px;
+      margin: 0px 8px;
+      opacity: 0.6;
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: relative;
+    right: unset;
+    top: unset;
+    left: unset;
+    bottom: unset;
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $mainColor;
+    width: auto;
+    transition: $transition;
+    z-index: 1;
+    &::after {
+      width: 40px;
+      height: 40px;
+      background: url(../img/arrow.svg);
+      background-size: 40px 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      content: "___";
+    }
+  }
+  .swiper-button-next {
+    right: unset;
+  }
+  .swiper-button-prev {
+    &::after {
+      transform: scaleX(-1);
+    }
+  }
+}
 .appImgs {
   position: relative;
   padding: 50px 0;
@@ -480,65 +719,6 @@ footer {
         text-align: center;
       }
     }
-    .swiperBtns {
-      position: relative;
-      display: flex;
-      .swiper-pagination {
-        margin: 0px 10px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        top: unset;
-        bottom: unset;
-        right: unset;
-        left: unset;
-        color: $mainColor;
-        .swiper-pagination-current {
-          font-size: 30px;
-          font-weight: bold;
-          margin: 0px 8px;
-        }
-        .swiper-pagination-total {
-          font-size: 20px;
-          margin: 0px 8px;
-          opacity: 0.6;
-        }
-      }
-      .swiper-button-next,
-      .swiper-button-prev {
-        position: relative;
-        right: unset;
-        top: unset;
-        left: unset;
-        bottom: unset;
-        margin: 0 10px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $mainColor;
-        width: auto;
-        transition: $transition;
-        z-index: 1;
-        &::after {
-          width: 40px;
-          height: 40px;
-          background: url(../img/arrow.svg);
-          background-size: 40px 40px;
-          background-position: center;
-          background-repeat: no-repeat;
-          content: "___";
-        }
-      }
-      .swiper-button-next {
-        right: unset;
-      }
-      .swiper-button-prev {
-        &::after {
-          transform: scaleX(-1);
-        }
-      }
-    }
   }
   .swiper-3d .swiper-slide-shadow,
   .swiper-3d .swiper-slide-shadow-bottom,
@@ -556,6 +736,104 @@ footer {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   }
 }
+
+.contactUs {
+  padding: 70px 0 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+    background-color: $white-color;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: $shadow;
+    .inputField {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+    .inputGroup {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .inputForm {
+      border: 1px solid #eee;
+      min-height: 54px;
+      background-color: #fdfdfd;
+      border-radius: 8px;
+      padding: 0 10px;
+    }
+    .btn {
+      justify-content: center;
+    }
+  }
+  .contactInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .info {
+      background-color: #ebf7f8;
+      padding: 20px;
+      border-radius: 12px;
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      p,
+      a,
+      h6 {
+        transition: $transition;
+      }
+      a,
+      p{
+        color: #777;
+      }
+      a{
+        &:hover{
+          color: $mainColor;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        right: 50%;
+        top: 0;
+        width: 100%;
+        height: 0%;
+        background-color: $white-color;
+        border-radius: 12px;
+        transform: translateX(50%);
+        transition: $transition;
+        z-index: -1;
+        box-shadow: $BigShadow;
+      }
+      &:hover {
+        &::before {
+          height: 100%;
+        }
+       
+      }
+    }
+  }
+}
+.googleMap {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: none;
+  min-height: 250px;
+}
+
 /* PC device :991px. */
 @media (min-width: 991px) {
   body {
