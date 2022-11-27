@@ -172,7 +172,7 @@
                 </div>
             </div>
             <!-- Swiper -->
-            <div class="swiper mySwiper">
+            <div class="swiper phoneImgs">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="img/1.webp" />
@@ -217,6 +217,7 @@
                 <img src="img/2.png" class="frame" alt="">
             </div>
         </section>
+    
         <!-- download -->
         <section class="download" id="download">
             <div class="data">
@@ -233,6 +234,20 @@
             </div>
             <img class="mobileImg" src="img/info.webp" alt="">
         </section>
+            <!-- company -->
+            <section class="aboutUs company">
+                <div class="aboutImage">
+                    <img src="img/company.webp">
+                </div>
+                <div class="title">
+                    <h1> أضمن للشركات </h1>
+                    <h6>
+                        نسعد في أضمن في تقديم خدماتنا للشركات وتقديم خدمات الصيانة بجميع انواعها بعقود سنوية او شهرية .لدينا
+                        خبرة في هذه الاعمال تولدت من عقودنا السابقة مع عملائنا الذين نفخر بالعمل معهم سوياً
+                    </h6>
+                </div>
+                
+            </section>
         <!-- packages -->
         <section class="packages">
             <div class="packagesIcon">
@@ -275,6 +290,56 @@
                     </div>
                     <button type="submit" class="btn"> اشترك </button>
                 </form>
+            </div>
+        </section>
+        <!-- references -->
+        <section class="references">
+            <!-- Section Title -->
+            <div class="title ">
+                <h1> عملائنا - مصدر فخرنا </h1>
+                <p> نفخر في أضمن بعملاء مميزين تشرفت اضمن بتقديم خدماتها لهم على مدار العام اسماء تجارية مميزه في انشطة
+                    مختلفة كان لنا شرف التعامل معها وتقديم خدماتنا لهم </p>
+            </div>
+
+            <div class="swiper referencesSlider ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="referenceLogo ">
+                            <img src="img/r1.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="referenceLogo ">
+                            <img src="img/r2.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="referenceLogo ">
+                            <img src="img/r3.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="referenceLogo ">
+                            <img src="img/r4.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="referenceLogo ">
+                            <img src="img/r5.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="referenceLogo ">
+                            <img src="img/r6.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="referenceLogo ">
+                            <img src="img/r7.webp" alt="">
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
         <!-- contact us -->
@@ -325,6 +390,7 @@
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14558.730035181723!2d47.282808!3d24.182865!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbff0f6fdb71b92a!2z2KPYttmF2YYg2YTZhNi12YrYp9mG2Kk!5e0!3m2!1sen!2seg!4v1669242687537!5m2!1sen!2seg">
         </iframe>
 
+
     </content>
     <!-- footer -->
     <footer>
@@ -337,6 +403,16 @@
                     document.write(new Date().getFullYear())
                 </script>
             </div>
+
+            <div class="imgLinks">
+                <a href="https://about.adhmn.com/storage/KSYhutrMPHAFjQaOpGHuOsEtm4d48GDFbbT9VqOP.pdf" target="_blank">
+                    <img src="img/vat.svg" alt="">
+                </a>
+                <a href="https://maroof.sa/154707" target="_blank">
+                    <img src="img/maroof.png" alt="">
+                </a>
+            </div>
+
             <ul class="social">
                 <li>
                     <a href="#!" target="_blank">
@@ -365,7 +441,20 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        //Categories Slider
+        var referencesSlider = new Swiper(".referencesSlider", {
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 5,
+            speed: 1000,
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+        });
+
+        var phoneImgs = new Swiper(".phoneImgs", {
             effect: "coverflow",
             grabCursor: true,
             centeredSlides: true,
@@ -430,6 +519,8 @@
                 this.swiper.autoplay.start();
             }
         );
+
+
     </script>
 </body>
 

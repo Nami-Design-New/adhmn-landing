@@ -338,11 +338,13 @@ header .container {
 
 footer {
   background-color: #ebf7f8;
+  margin-top: 16px;
 }
 footer .container {
   display: flex;
   padding: 20px 10px;
   align-items: center;
+  gap: 16px;
   justify-content: space-between;
 }
 @media (max-width: 767px) {
@@ -358,11 +360,6 @@ footer .social {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-@media (max-width: 767px) {
-  footer .social {
-    margin-bottom: 20px;
-  }
 }
 footer .social li {
   width: 48px;
@@ -385,6 +382,42 @@ footer .social li a {
   justify-content: center;
   width: 100%;
   height: 100%;
+}
+footer .imgLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+footer .imgLinks img {
+  height: 70px;
+}
+
+.references {
+  border-radius: 16px;
+  margin: 50px 0;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.8549019608), rgba(255, 255, 255, 0.9333333333)), url(../img/map.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 2px 4px rgba(67, 67, 64, 0.1882352941);
+}
+.references .title {
+  text-align: center;
+  padding: 20px;
+  padding-top: 40px;
+}
+.references .swiper-slide {
+  width: auto;
+}
+.references .referenceLogo {
+  height: 150px;
+  padding: 10px 20px;
+}
+.references .referenceLogo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .package {
@@ -605,6 +638,9 @@ footer .social li a {
     border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
   }
 }
+.aboutUs.company .aboutImage:before {
+  background-color: #a3d8dd;
+}
 
 .services {
   padding: 50px 20px 20px;
@@ -812,7 +848,7 @@ footer .social li a {
 }
 
 .contactUs {
-  padding: 70px 0 20px;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
