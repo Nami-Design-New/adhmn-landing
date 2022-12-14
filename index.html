@@ -218,7 +218,6 @@
                 <img src="img/2.png" class="frame" alt="">
             </div>
         </section>
-
         <!-- download -->
         <section class="download" id="download">
             <div class="data">
@@ -247,7 +246,6 @@
                     خبرة في هذه الاعمال تولدت من عقودنا السابقة مع عملائنا الذين نفخر بالعمل معهم سوياً
                 </h6>
             </div>
-
         </section>
         <!-- packages -->
         <section class="packages">
@@ -256,7 +254,25 @@
             </div>
             <div class="data">
                 <h1> اشترك في الباقات و استمتع بخصومات اكبر ... </h1>
-                <form action="">
+                <form id="formPackage" method="post" action="">
+                    <div class="formPackage">
+                        <div class="inputField">
+                            <label class="form-label"> اسم المشترك </label>
+                            <input required type="text" class="inputForm" placeholder="الاسم بالكامل" name="title"
+                                value="" />
+                        </div>
+                        <div class="inputField">
+                            <label class="form-label"> رقم الهاتف </label>
+                            <input required type="number" class="inputForm" placeholder="رقم الجوال " name="phone"
+                                value="" />
+                        </div>
+                        <div class="inputField">
+                            <label class="form-label"> اختر المدينة </label>
+                            <select required class=" inputForm " name="city_id" aria-label="">
+                                <option value="5">الخرج</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="package row">
                         <div class="form-check col-sm-6 col-lg-4">
                             <input class="form-check-input" type="radio" name="package" id="package1">
@@ -295,7 +311,71 @@
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class="btn"> اشترك </button>
+                    <button type="button" class="btn modalControl"> اشترك</button>
+                    <div class="modal">
+                        <div class="modalBody">
+                            <h3 class="title"> الدفع والتاكيد </h3>
+                            <div class="row">
+                                <div class="col-sm-6 p-2">
+                                    <h5 class="secondTitle"> طرق الدفع : </h5>
+                                    <div class="paymentMethod ">
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="paymentMethod"
+                                                id="paymentMethod1">
+                                            <label class="form-check-label" for="paymentMethod1">
+                                                <p> بطاقة مدي البنكيه </p>
+                                                <img src="img/bronze.svg" alt="">
+                                            </label>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="paymentMethod"
+                                                id="paymentMethod2">
+                                            <label class="form-check-label" for="paymentMethod2">
+                                                <p> بطاقة ائتمانية </p>
+                                                <img src="img/silver.svg" alt="">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="inputField">
+                                        <label class="form-label"> ملاحظاتك : </label>
+
+                                        <textarea class="inputForm" rows="6"
+                                            placeholder="اذا عندك ملاحظات , اكتبها هنا   "></textarea>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6 p-2">
+                                    <h5 class="secondTitle">  تفاصيل الطلب : </h5>
+                                    <ul class="orderDetails">
+                                        <li> 
+                                            <p> المجموع غير شامل الضريبة </p>
+                                            <span> 200 SAR </span>
+                                        </li>
+                                        <li> 
+                                            <p> المجموع غير شامل الضريبة </p>
+                                            <span> 200 SAR </span>
+                                        </li>
+                                        <li> 
+                                            <p> المجموع غير شامل الضريبة </p>
+                                            <span> 200 SAR </span>
+                                        </li>
+                                        <li> 
+                                            <p> المجموع غير شامل الضريبة </p>
+                                            <span> 200 SAR </span>
+                                        </li>
+                                        <li> 
+                                            <p> المجموع الكلي </p>
+                                            <span> 200 SAR </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <button type="button" class="btn btnDark modalControl"> الغاء </button>
+                                <button type="submit" class="btn"> تاكيد</button>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </section>
@@ -307,7 +387,6 @@
                 <p> نفخر في أضمن بعملاء مميزين تشرفت اضمن بتقديم خدماتها لهم على مدار العام اسماء تجارية مميزه في انشطة
                     مختلفة كان لنا شرف التعامل معها وتقديم خدماتنا لهم </p>
             </div>
-
             <div class="swiper referencesSlider ">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -345,7 +424,6 @@
                             <img src="img/r7.webp" alt="">
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -396,8 +474,6 @@
         <iframe class="googleMap"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14558.730035181723!2d47.282808!3d24.182865!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfbff0f6fdb71b92a!2z2KPYttmF2YYg2YTZhNi12YrYp9mG2Kk!5e0!3m2!1sen!2seg!4v1669242687537!5m2!1sen!2seg">
         </iframe>
-
-
     </content>
     <!-- footer -->
     <footer>
@@ -411,17 +487,13 @@
                         سياسة الخصوصية
                     </a>
                 </div>
-
                 كل الحقوق محفوظة
                 <a class="company" href="#!" target="_blank"> ADHMN </a>
                 &copy;
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
-
-               
             </div>
-
             <div class="imgLinks">
                 <a href="https://about.adhmn.com/storage/KSYhutrMPHAFjQaOpGHuOsEtm4d48GDFbbT9VqOP.pdf" target="_blank">
                     <img src="img/vat.svg" alt="">
@@ -430,7 +502,6 @@
                     <img src="img/maroof.png" alt="">
                 </a>
             </div>
-
             <ul class="social">
                 <li>
                     <a href="#!" target="_blank">
@@ -473,7 +544,6 @@
                 disableOnInteraction: false,
             },
         });
-
         var phoneImgs = new Swiper(".phoneImgs", {
             effect: "coverflow",
             grabCursor: true,
@@ -539,8 +609,18 @@
                 this.swiper.autoplay.start();
             }
         );
-
-
+    </script>
+    <script>
+        $(".modalControl").click(function () {
+            $('.modal').toggleClass('show')
+        });
+        $(document).mouseup(function (e) {
+            var container = $(".modalBody");
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
+                $('.modal').removeClass('show')
+            }
+        });
     </script>
 </body>
 
