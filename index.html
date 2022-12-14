@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="img/fav.svg">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -217,7 +218,7 @@
                 <img src="img/2.png" class="frame" alt="">
             </div>
         </section>
-    
+
         <!-- download -->
         <section class="download" id="download">
             <div class="data">
@@ -234,20 +235,20 @@
             </div>
             <img class="mobileImg" src="img/info.webp" alt="">
         </section>
-            <!-- company -->
-            <section class="aboutUs company">
-                <div class="aboutImage">
-                    <img src="img/company.webp">
-                </div>
-                <div class="title">
-                    <h1> أضمن للشركات </h1>
-                    <h6>
-                        نسعد في أضمن في تقديم خدماتنا للشركات وتقديم خدمات الصيانة بجميع انواعها بعقود سنوية او شهرية .لدينا
-                        خبرة في هذه الاعمال تولدت من عقودنا السابقة مع عملائنا الذين نفخر بالعمل معهم سوياً
-                    </h6>
-                </div>
-                
-            </section>
+        <!-- company -->
+        <section class="aboutUs company">
+            <div class="aboutImage">
+                <img src="img/company.webp">
+            </div>
+            <div class="title">
+                <h1> أضمن للشركات </h1>
+                <h6>
+                    نسعد في أضمن في تقديم خدماتنا للشركات وتقديم خدمات الصيانة بجميع انواعها بعقود سنوية او شهرية .لدينا
+                    خبرة في هذه الاعمال تولدت من عقودنا السابقة مع عملائنا الذين نفخر بالعمل معهم سوياً
+                </h6>
+            </div>
+
+        </section>
         <!-- packages -->
         <section class="packages">
             <div class="packagesIcon">
@@ -256,31 +257,37 @@
             <div class="data">
                 <h1> اشترك في الباقات و استمتع بخصومات اكبر ... </h1>
                 <form action="">
-                    <div class="package">
-                        <div class="form-check">
+                    <div class="package row">
+                        <div class="form-check col-sm-6 col-lg-4">
                             <input class="form-check-input" type="radio" name="package" id="package1">
                             <label class="form-check-label" for="package1">
-                                <img src="img/bronze.svg" alt="">
+                                <a data-fancybox="" href="img/bronze.svg">
+                                    <img src="img/bronze.svg" alt="">
+                                </a>
                                 <div class="info">
                                     <h2> باقة 1 شهر </h2>
                                     <p> احصب علي الخدمات بسعر رمزي بالاضافة الي خصومات وعروض مشتمرة لمدة شهر</p>
                                 </div>
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check col-sm-6 col-lg-4">
                             <input class="form-check-input" type="radio" name="package" id="package2">
                             <label class="form-check-label" for="package2">
-                                <img src="img/silver.svg" alt="">
+                                <a data-fancybox="" href="img/silver.svg">
+                                    <img src="img/silver.svg" alt="">
+                                </a>
                                 <div class="info">
                                     <h2> باقة 6 شهور </h2>
                                     <p> احصب علي الخدمات بسعر رمزي بالاضافة الي خصومات وعروض مشتمرة لمدة 6 شهور</p>
                                 </div>
                             </label>
                         </div>
-                        <div class="form-check">
+                        <div class="form-check col-sm-6 col-lg-4">
                             <input class="form-check-input" type="radio" name="package" id="package3">
                             <label class="form-check-label" for="package3">
-                                <img src="img/gold.svg" alt="">
+                                <a data-fancybox="" href="img/gold.svg">
+                                    <img src="img/gold.svg" alt="">
+                                </a>
                                 <div class="info">
                                     <h2> باقة 1 سنة </h2>
                                     <p> احصب علي الخدمات بسعر رمزي بالاضافة الي خصومات وعروض مشتمرة لمدة سنة</p>
@@ -396,12 +403,23 @@
     <footer>
         <div class="container">
             <div class="data">
+                <div class="links">
+                    <a href="#!" target="_blank">
+                        الشروط والأحكام
+                    </a>
+                    <a href="#!" target="_blank">
+                        سياسة الخصوصية
+                    </a>
+                </div>
+
                 كل الحقوق محفوظة
                 <a class="company" href="#!" target="_blank"> ADHMN </a>
                 &copy;
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
+
+               
             </div>
 
             <div class="imgLinks">
@@ -437,6 +455,8 @@
             </ul>
         </div>
     </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
